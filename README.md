@@ -20,7 +20,6 @@ This App is specifically tailored towards the [Santa Barbara Corpus of Spoken Am
   George: Well hello there<punc type="comma" /> Adrian<punc type="stop" />
 </dialogue>
 ```
-=> is parsed to => 
 ```xml
 <dialogue id="1" corpus="test" lang="en">
   <turn n="1" speaker="Adrian">
