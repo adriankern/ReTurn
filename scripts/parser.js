@@ -55,10 +55,10 @@ function parseFile() {
 
     parsedText = unparsedText.replace(pattern, match => {
         turnNumber++;
-        return `${turnNumber > 1 ? "</turn>\n" : ""}<turn n="${turnNumber}" speaker="${match.slice(0, postfix.length * -1)}">\n`;
+        return `${turnNumber > 1 ? "</turn>\r\n" : ""}<turn n="${turnNumber}" speaker="${match.slice(0, postfix.length * -1)}">\r\n`;
     });
 
-    parsedText = parsedText.replace(/\<\/dialogue\>/mg, "</turn>\n</dialogue>");
+    parsedText = parsedText.replace(/\<\/dialogue\>/mg, "</turn>\r\n</dialogue>");
 
     document.getElementById("parsed_Area").value = parsedText;
     document.getElementById("downloadBtn").disabled = false;
